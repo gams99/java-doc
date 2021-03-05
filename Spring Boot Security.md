@@ -34,4 +34,4 @@ public void shouldFindByNome() {
 
 Retorna sucesso, pois a variável nomeCurso existe no DB usado:
 
-![[img/result-test.png]]
+![[result-test.png]](https://github.com/gams99/java-doc/blob/main/img/result-test.png)
