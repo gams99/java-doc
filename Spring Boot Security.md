@@ -34,4 +34,4 @@ public void shouldFindByNome() {
 
 Retorna sucesso, pois a variável nomeCurso existe no DB usado:
 
-![[result-test.png]]
+![[img/result-test.png]]
