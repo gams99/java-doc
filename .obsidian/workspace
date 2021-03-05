@@ -10,8 +10,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "JAVA/Spring Boot Security.md",
-            "mode": "source"
+            "file": "Spring Boot Security.md",
+            "mode": "preview"
           }
         }
       }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "JAVA/Spring Boot Security.md",
+                "file": "Spring Boot Security.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,6 +86,7 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "Spring Boot Security.md",
     "JAVA/Spring Boot Security.md",
     "JAVA/Untitled.md",
     "Untitled.md"
