@@ -11,7 +11,7 @@ ex.:` .antMatchers(HttpMethod.DELETE, "/topicos/\*")**.hasRole("MODERADOR")**`
 - Para ativar e alterar perfis no IntelliJ, seguir os seguintes passos:
  	-> Edit Configurations > Run/Debug Configurations > 
  			**VM Options:** `-Dspring.profiles.active="NOME_DO_PERFIL"`
-			**Program Arguments:** NOME_DO_PERFIL
+			**Program Arguments:** "NOME_DO_PERFIL"
 `@ActiveProfiles("NOME)"`: inserindo este argumento em uma classe, ele força o ambiente a ser o escolhido. 
 			
 <h3>Spring Boot Test</h3>
@@ -20,7 +20,8 @@ Testes automatizados, utilizando JUnit.
 <h4>Anotação de início da classe de teste </h4>
 
 `@SpringBootTest` -> serve para que o Spring inicialize o servidor e carregue os beans da aplicação durante a execução dos testes automatizados -> inserir essa anotação na classe que fará o teste
-`DataJpaTest` -> Para classes de Repository
+`@DataJpaTest` -> Para testes classes de Repository
+`@WebMvcTest` -> Para testes em classes de Controller
 
 Inserir `@Test` em cada teste, abaixo, exemplo de código:
 
