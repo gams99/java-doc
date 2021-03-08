@@ -12,7 +12,7 @@ ex.:` .antMatchers(HttpMethod.DELETE, "/topicos/\*")**.hasRole("MODERADOR")**`
  	-> Edit Configurations > Run/Debug Configurations > 
  			**VM Options:** `-Dspring.profiles.active="NOME_DO_PERFIL"`
 			**Program Arguments:** "NOME_DO_PERFIL"
-`@ActiveProfiles("NOME)"`: inserindo este argumento em uma classe, ele força o ambiente a ser o escolhido. 
+`@ActiveProfiles("NOME)"`: inserindo este argumento em uma classe, ele **força** o ambiente a ser o escolhido. 
 			
 <h3>Spring Boot Test</h3>
 
