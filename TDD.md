@@ -1,0 +1,2 @@
+1. TDD são feitos usando o JUnit, para adicionar a lib do JUnit no projeto, ir em *File > Project Structure>Project Settings>select Libraries> procurar por "junit"*
+2. Utilizar a anotação `@Test` na classe 
