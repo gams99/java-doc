@@ -13,8 +13,8 @@
 ```
 @Test  
 public void deveReceber2LancesSeguidosDoMesmoUsuario(){  
-    Leilao leilao \= new Leilao("Mackbook Pro 15");  
-    Usuario steveJobs \= new Usuario("Steve Jobs");  
+    Leilao leilao = new Leilao("Mackbook Pro 15");  
+    Usuario steveJobs = new Usuario("Steve Jobs");  
     leilao.propoe(new Lance(steveJobs, 2000));  
     leilao.propoe(new Lance(steveJobs, 3000));  
   
