@@ -1,6 +1,6 @@
 <h4>Test Driven Development</h4>
 
-![[example-tdd.png]](github link)
+![[example-tdd.png]](https://github.com/gams99/java-doc/blob/main/img/example-tdd.png)
 
 É recomendado fazer as classes de testes antes da classe da funcionalidade.
 1. TDD são feitos usando o JUnit, para adicionar a lib do JUnit no projeto, ir em *File > Project Structure>Project Settings>select Libraries> procurar por "junit"*
