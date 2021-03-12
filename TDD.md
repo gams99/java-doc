@@ -9,7 +9,12 @@
 		`Assert.assertEquals(VALOR_ESPERADO, VALOR_ATUAL, DIFERENCA_ACEITA*)` *opcional*
 4. É uma boa prática criar métodos para classes e atributos repetitivos. 
 	- Para algo, como por exemplo um método, ser chamado antes do `@Test` e **automaticamente** ao iniciar a classe de TESTE, anotar com `@Before` e o metódo ser público:
+	- Utilizamos métodos `@After` quando nossos testes consomem recursos que precisam ser finalizados. Exemplos podem ser testes que acessam banco de dados, abrem arquivos, abrem sockets,
+	- Métodos anotados com `@BeforeClass` são executados apenas uma vez, antes de todos os métodos de teste.
+	- O método anotado com `@AfterClass`, por sua vez, é executado uma vez, após a execução do último método de teste da classe.
+	-
 	- Usar [Test Data Builder](#ancora1)
+	
 ```
 @Before  
 public void criaAvaliador(){  
@@ -21,7 +26,8 @@ public void criaAvaliador(){
 
 ```
 @Test  
-public void deveReceber2LancesSeguidoMesmoUsuario(){  
+public void deveReceber2LancesSeguidoMesmoUsuario(){ 
+
     Leilao leilao = new Leilao("Mackbook Pro 15");  
     Usuario steveJobs = new Usuario("Steve Jobs");  
     leilao.propoe(new Lance(steveJobs, 2000));  
@@ -42,9 +48,7 @@ Utilizado em métodos repetivos, como por exemplo
 Leilao leilao = new Leilao("PS5");
 
 leilao.propoe(new Lance(maria, 300.0));
-
 leilao.propoe(new Lance(joao, 400.0));
-
 leilao.propoe(new Lance(jose, 500.0))
 ```
 
@@ -52,14 +56,10 @@ Podemos substituir por um método mais elegante, como:
 
 ```
 Leilao leilao = new CriadorDeLeilao().para("PS5")
-
-.lance(joao, 100.0)
-
-.lance(maria, 200.0)
-
-.lance(joao, 300.0)
-
-.constroi();
+	.lance(joao, 100.0)
+	.lance(maria, 200.0)
+	.lance(joao, 300.0)
+	.constroi();
 ```
 Repare que os códigos fazem a mesma coisa, sendo necessário criar apenas a classe `CriadorDeLeilao` com os atributos e métodos:
 
