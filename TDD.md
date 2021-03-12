@@ -9,7 +9,7 @@
 		`Assert.assertEquals(VALOR_ESPERADO, VALOR_ATUAL, DIFERENCA_ACEITA*)` *opcional*
 4. É uma boa prática criar métodos para classes e atributos repetitivos. 
 	- Para algo, como por exemplo um método, ser chamado antes do `@Test` e **automaticamente** ao iniciar a classe de TESTE, anotar com `@Before` e o metódo ser público:
-	- 
+	- Usar [Test Data Builder](#ancora1)
 ```
 @Before  
 public void criaAvaliador(){  
@@ -32,3 +32,6 @@ public void deveReceber2LancesSeguidoMesmoUsuario(){
 }
 ```
 - O primeiro "*assertEquals*" verifica o tamanho da lista, pra ver se é o que ele espera e o segundo, verifica o valor.
+
+<a id="ancora1"></a>
+<h4>Test Data Builder</h4>
