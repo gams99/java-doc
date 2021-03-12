@@ -35,3 +35,52 @@ public void deveReceber2LancesSeguidoMesmoUsuario(){
 
 <a id="ancora1"></a>
 <h4>Test Data Builder</h4>
+
+Utilizado em métodos repetivos, como por exemplo
+
+```
+Leilao leilao = new Leilao("PS5");
+
+leilao.propoe(new Lance(maria, 300.0));
+
+leilao.propoe(new Lance(joao, 400.0));
+
+leilao.propoe(new Lance(jose, 500.0))
+```
+
+Podemos substituir por um método mais elegante, como:
+
+```
+Leilao leilao = new CriadorDeLeilao().para("PS5")
+
+.lance(joao, 100.0)
+
+.lance(maria, 200.0)
+
+.lance(joao, 300.0)
+
+.constroi();
+```
+Repare que os códigos fazem a mesma coisa, sendo necessário criar apenas a classe `CriadorDeLeilao` com os atributos e métodos:
+
+```
+public class CriadorDeLeilao {  
+  
+    private Leilao leilao;  
+  
+    public CriadorDeLeilao para(String descricao) {  
+        this.leilao = new Leilao(descricao);  
+        return this;  
+    }  
+  
+    public CriadorDeLeilao lance(Usuario usuario, double valor) {  
+        leilao.propoe(new Lance(usuario, valor));  
+        return this;  
+    }  
+  
+    public Leilao constroi() {  
+        return leilao;  
+    }  
+}
+```
+
