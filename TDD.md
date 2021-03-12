@@ -7,12 +7,21 @@
 2. Utilizar a anotação `@Test` na classe.
 3. Na realização de testes, existem algumas opções de testes como explificadas abaixo:
 		`Assert.assertEquals(VALOR_ESPERADO, VALOR_ATUAL, DIFERENCA_ACEITA*)` *opcional*
-		
+4. É uma boa prática criar métodos para classes e atributos repetitivos. 
+	- Para algo, como por exemplo um método, ser chamado antes do `@Test` e **automaticamente** ao iniciar a classe de TESTE, anotar com `@Before` e o metódo ser público:
+	- 
+```
+@Before  
+public void criaAvaliador(){  
+    this.leiloeiro = new Avaliador();  
+}
+```
+
 <h4>Exemplo de métodos de teste</h4>
 
 ```
 @Test  
-public void deveReceber2LancesSeguidosDoMesmoUsuario(){  
+public void deveReceber2LancesSeguidoMesmoUsuario(){  
     Leilao leilao = new Leilao("Mackbook Pro 15");  
     Usuario steveJobs = new Usuario("Steve Jobs");  
     leilao.propoe(new Lance(steveJobs, 2000));  
